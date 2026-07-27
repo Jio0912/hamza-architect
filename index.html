@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth"><head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skifa Architecture | Bureau d’étude d’architecture et d’urbanisme à Draria</title>
+<meta name="description" content="Skifa Architecture — Bureau d’étude d’architecture et d’urbanisme à Draria. Permis, conception, génie civil, études techniques, suivi, topographie et design 3D.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+/* Custom Font Settings */
+:root {
+--font-serif: 'Playfair Display', serif;
+--font-sans: 'Montserrat', sans-serif;
+--color-charcoal: #0d0f0b;
+--color-cream: #f3e5d5;
+--color-beige: #e8d9cb;
+--color-gold: #C5A065;
+}
+body {
+font-family: var(--font-sans);
+color: var(--color-charcoal);
+background-color: #fdfbf9;
+-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: var(--font-serif);
+}
+/* Hide Scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+display: none;
+}
+.no-scrollbar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+/* Custom Checkbox Logic for Mobile Menu */
+#mobile-menu-toggle:checked ~ #mobile-menu {
+transform: translateX(0);
+opacity: 1;
+}
+/* Custom Input Styles */
+.custom-input:focus ~ label,
+.custom-input:not(:placeholder-shown) ~ label {
+transform: translateY(-150%) scale(0.85);
+color: var(--color-gold);
+}
+/* Image Parallax Effect (Simple CSS Implementation) */
+.parallax-bg {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+/* Smooth Reveal Animation Utilities */
+.reveal-on-scroll {
+opacity: 0;
+transform: translateY(30px);
+transition: all 1s ease-out;
+}
+.reveal-visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Mobile and touch refinements */
+html { scroll-padding-top: 82px; }
+img { max-width: 100%; }
+[dir="rtl"] { font-family: Arial, "Noto Sans Arabic", sans-serif; }
+.service-card { min-height: 100%; }
+.project-card img { width: 100%; display: block; }
+@media (hover: none) {
+  .project-overlay { opacity: 1 !important; background: linear-gradient(to top, rgba(13,15,11,.88), rgba(13,15,11,.08) 68%) !important; }
+}
+@media (max-width: 767px) {
+  .parallax-bg { background-attachment: scroll; }
+  header { min-height: 680px; height: 100svh; }
+  #mobile-menu { height: 100dvh; overflow-y: auto; }
+  .mobile-safe-title { font-size: clamp(2.6rem, 14vw, 4.4rem); }
+  .mobile-arabic-title { font-size: clamp(1.2rem, 6vw, 2rem); line-height: 1.6; }
+  .contact-panel { padding: 4.5rem 1.5rem; }
+  .contact-form-panel { padding: 4.5rem 1.5rem; }
+}
+
+</style>
+<script>
+// Simple Intersection Observer for scroll animations
+document.addEventListener('DOMContentLoaded', () => {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('reveal-visible');
+}
+});
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+
+const menuToggle = document.getElementById('mobile-menu-toggle');
+document.querySelectorAll('#mobile-menu a').forEach((link) => {
+  link.addEventListener('click', () => { menuToggle.checked = false; });
+});
+menuToggle.addEventListener('change', () => {
+  document.body.style.overflow = menuToggle.checked ? 'hidden' : '';
+});
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    menuToggle.checked = false;
+    document.body.style.overflow = '';
+  }
+});
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Architect",
+  "name": "Skifa Architecture - Bureau d'Etude d'Architecture et d'Urbanisme",
+  "alternateName": "مكتب دراسات الهندسة المعمارية و التعمير – السقيفة",
+  "founder": {
+    "@type": "Person",
+    "name": "ADEL Hamza",
+    "jobTitle": "Architecte agréé"
+  },
+  "telephone": ["+213770891904", "+213541497725"],
+  "email": "Bet.skifa2018@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue BEN CHAABANE Mouloud n°12, en face de la Daïra",
+    "addressLocality": "Draria",
+    "addressRegion": "Alger",
+    "addressCountry": "DZ"
+  },
+  "hasMap": "https://maps.app.goo.gl/PS2biYjtbvAnyFh56"
+}
+</script>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-[#e8d9cb] selection:text-[#0d0f0b]">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-[#fdfbf9]/90 backdrop-blur-md border-b border-[#e8d9cb]/30">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="flex items-center" aria-label="Skifa Architecture — Accueil">
+                <img src="https://i.ibb.co/BKcWTXcH/Untitled-design-27.png" alt="Logo Skifa Architecture" class="h-12 md:h-14 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-10 text-xs tracking-widest uppercase font-medium text-[#0d0f0b]/80">
+                <a href="#philosophy" class="hover:text-[#C5A065] transition-colors duration-300">À propos</a>
+                <a href="#services" class="hover:text-[#C5A065] transition-colors duration-300">Services</a>
+                <a href="#portfolio" class="hover:text-[#C5A065] transition-colors duration-300">Projets</a>
+                <a href="#process" class="hover:text-[#C5A065] transition-colors duration-300">Méthode</a>
+                <a href="#contact" class="px-6 py-3 border border-[#0d0f0b] hover:bg-[#0d0f0b] hover:text-white transition-all duration-300">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <label for="mobile-menu-toggle" class="md:hidden cursor-pointer z-50">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="28" stroke-width="1.5"></iconify-icon>
+            </label>
+            <input type="checkbox" id="mobile-menu-toggle" class="hidden">
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu" class="fixed inset-0 bg-[#fdfbf9] z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center space-y-8 opacity-0">
+                <a href="#philosophy" class="text-2xl font-serif text-[#0d0f0b]">À propos</a>
+                <a href="#services" class="text-2xl font-serif text-[#0d0f0b]">Services</a>
+                <a href="#portfolio" class="text-2xl font-serif text-[#0d0f0b]">Projets</a>
+                <a href="#process" class="text-2xl font-serif text-[#0d0f0b]">Méthode</a>
+                <a href="#contact" class="text-lg uppercase tracking-widest border-b border-[#0d0f0b] pb-2">Nous contacter</a>
+                
+                <label for="mobile-menu-toggle" class="absolute top-6 right-6 cursor-pointer">
+                    <iconify-icon icon="solar:close-circle-linear" width="32" stroke-width="1.5"></iconify-icon>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Parallax Feel -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://i.ibb.co/sdfgsv6w/unnamed-1.webp" alt="Suivi de chantier réalisé par Skifa Architecture" class="w-full h-full object-cover object-center brightness-75">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-[#0d0f0b]/30 z-10"></div>
+
+        <div class="relative z-20 text-center text-white px-6 reveal-on-scroll">
+            <p class="text-xs md:text-sm tracking-[0.3em] uppercase mb-6 text-[#f3e5d5]/90 font-light">Bureau d’études en architecture et urbanisme</p>
+            <h1 class="mobile-safe-title text-5xl md:text-7xl lg:text-8xl font-serif font-normal tracking-tight mb-5 leading-tight">
+                BET SKIFA<br><span class="mobile-arabic-title block mt-4 text-2xl md:text-4xl lg:text-5xl font-light" dir="rtl" lang="ar">مكتب دراسات الهندسة المعمارية والتعمير</span>
+            </h1>
+            <p class="text-sm md:text-lg font-light tracking-wide max-w-lg mx-auto mb-10 text-white/90">
+                Permis, conception architecturale, études techniques, topographie, visualisation 3D et suivi de chantier.
+            </p>
+            <a href="#portfolio" class="group inline-flex items-center gap-3 text-sm tracking-widest uppercase border-b border-white pb-2 hover:text-[#f3e5d5] hover:border-[#f3e5d5] transition-all duration-300">
+                Découvrir nos projets
+                <iconify-icon icon="solar:arrow-right-linear" width="18" stroke-width="1.5" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+            </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
+            <iconify-icon icon="solar:mouse-minimalistic-linear" width="24" stroke-width="1.5"></iconify-icon>
+        </div>
+    </header>
+
+    <!-- Philosophy / Introduction -->
+    <section id="philosophy" class="py-24 md:py-32 bg-[#fdfbf9] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal-on-scroll">
+                    <div class="absolute -top-10 -left-10 w-2/3 h-full border border-[#e8d9cb] z-0 hidden md:block"></div>
+                    <img src="https://i.ibb.co/0R1HSBVL/unnamed-6.webp" alt="ADEL Hamza en mission de suivi architectural" loading="lazy" class="relative z-10 w-full h-[600px] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 ease-out">
+                </div>
+                <div class="lg:pl-12 reveal-on-scroll">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#0d0f0b] mb-8 leading-tight tracking-tight">
+                        Nous concevons avec <span class="italic text-[#C5A065]">précision</span> et exigence.
+                    </h2>
+                    <div class="w-16 h-[1px] bg-[#0d0f0b] mb-8"></div>
+                    <p class="text-gray-600 mb-6 font-light leading-relaxed text-sm md:text-base">
+                        Skifa Architecture est un bureau d’étude d’architecture et d’urbanisme dirigé par ADEL Hamza, architecte agréé. Le bureau accompagne les particuliers, promoteurs et professionnels depuis les premières études jusqu’au suivi des travaux.
+                    </p>
+                    <p class="text-gray-600 mb-10 font-light leading-relaxed text-sm md:text-base">
+                        Notre intervention couvre les permis, la conception intérieure et extérieure, l’architecture, le génie civil, les études techniques, la topographie, les devis, les fiches techniques et l’assistance immobilière.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+                        <div>
+                            <span class="block text-2xl font-serif text-[#0d0f0b]">ADEL Hamza</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Architecte agréé</span>
+                        </div>
+                        <div>
+                            <a href="tel:+213770891904" class="group">
+                                <span class="block text-2xl font-serif text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">0770 89 19 04</span>
+                                <span class="text-xs uppercase tracking-widest text-gray-500">Viber / WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="inline-flex flex-col border-l-2 border-[#C5A065] pl-4">
+                        <span class="font-serif text-2xl tracking-wide">BET SKIFA</span>
+                        <span class="text-sm text-gray-500 mt-1" dir="rtl" lang="ar">مكتب دراسات الهندسة المعمارية والتعمير</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-[#f3e5d5]/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <span class="text-xs tracking-[0.2em] uppercase text-[#C5A065] font-semibold mb-3 block">خدمات المكتب — Notre expertise</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-[#0d0f0b] tracking-tight">Nos services</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:document-add-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Permis</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Étude et préparation des dossiers de permis de construire, démolir, lotir, morceler et autres autorisations.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">دراسة و إعداد ملفات رخص البناء، الهدم، التجزئة، التقسيم</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:ruler-pen-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Conception et design</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Conception intérieure et extérieure des bâtiments, depuis l’idée jusqu’aux plans détaillés.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">التصاميم الداخلية والخارجية للمباني</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:buildings-2-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Architecture et génie civil</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Préparation des différentes études architecturales et de génie civil selon la nature du projet.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">إعداد مختلف الدراسات المعمارية و المدنية</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:settings-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Étude technique</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Études techniques de construction durant les différentes phases de développement du projet.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">الدراسات التقنية للبناء في مختلف مراحله</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:clipboard-check-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Suivi</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Suivi des travaux de construction, contrôle de conformité et coordination des interventions.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">متابعة أشغال البناء في مختلف مراحله</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:leaf-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Études paysagères et urbaines</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Aménagement extérieur des bâtiments, espaces verts et études d’intégration urbaine.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">دراسة التهيئة الخارجية للمباني والمساحات الخضراء</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:document-text-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Fiches techniques</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Élaboration de fiches techniques adaptées aux caractéristiques et objectifs de chaque projet.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">إعداد البطاقات التقنية لمختلف المشاريع</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:chat-round-check-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Consultation</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Consultations architecturales et techniques pour orienter les décisions et sécuriser le projet.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">الإستشارات المعمارية و التقنية المختلفة</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:map-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Topographie</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Relevés architecturaux et topographiques des bâtiments, parcelles et terrains.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">الرفع المعماري و الطوبوغرافي للبنايات و الأراضي</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:box-minimalistic-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">3D Design</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Conception et présentation architecturale en trois dimensions avec maquette numérique.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">التصميم والعرض المعماري ثلاثي الأبعاد للبنايات</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:home-smile-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Conseils et assistance immobilière</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Conseil et accompagnement dans les opérations immobilières : constat, évaluation et assistance.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">الإستشارة و المرافقة في المعاملات العقارية</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:calculator-minimalistic-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Devis</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Établissement des devis quantitatifs et estimatifs nécessaires à la planification financière.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">إعداد الكشوفات الكمية و التقديرية</p>
+                </article>
+                <article class="service-card group p-7 bg-white border border-[#e8d9cb]/60 hover:border-[#C5A065] transition-all duration-500 hover:shadow-xl hover:-translate-y-1 reveal-on-scroll">
+                    <div class="mb-5 text-[#0d0f0b] group-hover:text-[#C5A065] transition-colors">
+                        <iconify-icon icon="solar:shield-check-linear" width="38" stroke-width="1"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-serif mb-3">Autorisation d’exploitation</h3>
+                    <p class="text-xs leading-relaxed text-gray-500 font-light mb-4">Fiches techniques et plans nécessaires à l’obtention des autorisations d’exploitation des projets classés.</p>
+                    <p class="text-sm leading-relaxed text-[#0d0f0b]/70 border-t border-[#e8d9cb]/70 pt-4" dir="rtl" lang="ar">إعداد البطاقات التقنية والمخططات للحصول على رخص الإستغلال</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 md:py-32 bg-[#fdfbf9]">
+        <div class="max-w-7xl mx-auto px-6 mb-14 reveal-on-scroll">
+            <span class="text-xs tracking-[0.2em] uppercase text-[#C5A065] font-semibold mb-3 block">Réalisations</span>
+            <h2 class="text-4xl md:text-5xl font-serif text-[#0d0f0b] tracking-tight">Nos projets</h2>
+            <p class="mt-5 max-w-2xl text-sm md:text-base text-gray-600 font-light leading-relaxed">
+                Cliquez sur un projet pour parcourir l’ensemble de ses images.
+            </p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+                <article class="project-gallery-card reveal-on-scroll">
+                    <button type="button"
+                        class="project-gallery-trigger block w-full overflow-hidden bg-[#e8d9cb]"
+                        data-project="project1"
+                        aria-label="Ouvrir la galerie du projet 1">
+                        <img src="https://i.ibb.co/WND8Y7wK/cc16bc24-3511-469f-9b82-33656fe54c86.jpg"
+                            alt="Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4"
+                            loading="lazy"
+                            class="w-full aspect-[4/3] object-cover transition-transform duration-700 hover:scale-105">
+                    </button>
+                    <div class="pt-6">
+                        <span class="text-xs tracking-[0.18em] uppercase text-[#C5A065]">Projet 01</span>
+                        <h3 class="mt-2 text-xl md:text-2xl font-serif text-[#0d0f0b] leading-snug">Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4</h3>
+                        <p class="mt-4 flex items-center gap-2 text-sm text-gray-600 font-light">
+                            <iconify-icon icon="solar:map-point-linear" width="18" class="text-[#C5A065]"></iconify-icon>
+                            Les Vergers — Kouba
+                        </p>
+                    </div>
+                </article>
+                <article class="project-gallery-card reveal-on-scroll">
+                    <button type="button"
+                        class="project-gallery-trigger block w-full overflow-hidden bg-[#e8d9cb]"
+                        data-project="project2"
+                        aria-label="Ouvrir la galerie du projet 2">
+                        <img src="https://i.ibb.co/Q38Q4pVw/2ce74f19-2251-435b-86aa-b0dbf049fb9e.jpg"
+                            alt="Étude et suivi d’une construction à usage d’habitation en R+2 + attique"
+                            loading="lazy"
+                            class="w-full aspect-[4/3] object-cover transition-transform duration-700 hover:scale-105">
+                    </button>
+                    <div class="pt-6">
+                        <span class="text-xs tracking-[0.18em] uppercase text-[#C5A065]">Projet 02</span>
+                        <h3 class="mt-2 text-xl md:text-2xl font-serif text-[#0d0f0b] leading-snug">Étude et suivi d’une construction à usage d’habitation en R+2 + attique</h3>
+                        <p class="mt-4 flex items-center gap-2 text-sm text-gray-600 font-light">
+                            <iconify-icon icon="solar:map-point-linear" width="18" class="text-[#C5A065]"></iconify-icon>
+                            Zemmouri — Boumerdès
+                        </p>
+                    </div>
+                </article>
+                <article class="project-gallery-card reveal-on-scroll">
+                    <button type="button"
+                        class="project-gallery-trigger block w-full overflow-hidden bg-[#e8d9cb]"
+                        data-project="project3"
+                        aria-label="Ouvrir la galerie du projet 3">
+                        <img src="https://i.ibb.co/YB3NQhwN/a83d6383-19aa-4d5c-8f5f-8054c3d40428.jpg"
+                            alt="Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements"
+                            loading="lazy"
+                            class="w-full aspect-[4/3] object-cover transition-transform duration-700 hover:scale-105">
+                    </button>
+                    <div class="pt-6">
+                        <span class="text-xs tracking-[0.18em] uppercase text-[#C5A065]">Projet 03</span>
+                        <h3 class="mt-2 text-xl md:text-2xl font-serif text-[#0d0f0b] leading-snug">Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements</h3>
+                        <p class="mt-4 flex items-center gap-2 text-sm text-gray-600 font-light">
+                            <iconify-icon icon="solar:map-point-linear" width="18" class="text-[#C5A065]"></iconify-icon>
+                            El Achour
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Modal -->
+    <div id="project-gallery-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 p-4 md:p-8" aria-hidden="true">
+        <button id="gallery-close" type="button"
+            class="absolute top-4 right-4 md:top-6 md:right-6 z-20 w-11 h-11 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white hover:text-black transition-colors"
+            aria-label="Fermer la galerie">
+            <iconify-icon icon="solar:close-circle-linear" width="30"></iconify-icon>
+        </button>
+        <button id="gallery-prev" type="button"
+            class="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white hover:text-black transition-colors"
+            aria-label="Image précédente">
+            <iconify-icon icon="solar:alt-arrow-left-linear" width="28"></iconify-icon>
+        </button>
+        <div class="w-full max-w-6xl">
+            <div class="relative flex items-center justify-center min-h-[55vh] md:min-h-[70vh]">
+                <img id="gallery-image" src="" alt="" class="max-h-[72vh] md:max-h-[78vh] max-w-full object-contain">
+            </div>
+            <div class="mt-5 text-center text-white px-12">
+                <h3 id="gallery-title" class="text-xl md:text-3xl font-serif leading-snug"></h3>
+                <p id="gallery-location" class="mt-2 text-sm text-white/70"></p>
+                <p id="gallery-counter" class="mt-3 text-xs tracking-[0.2em] uppercase text-white/60"></p>
+            </div>
+        </div>
+        <button id="gallery-next" type="button"
+            class="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 flex items-center justify-center rounded-full border border-white/30 text-white hover:bg-white hover:text-black transition-colors"
+            aria-label="Image suivante">
+            <iconify-icon icon="solar:alt-arrow-right-linear" width="28"></iconify-icon>
+        </button>
+    </div>
+
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 bg-[#0d0f0b] text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 reveal-on-scroll">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-serif tracking-tight mb-2">Notre méthode</h2>
+                    <p class="text-gray-400 font-light text-sm">De la première idée au suivi de réalisation.</p>
+                </div>
+            </div>
+
+            <div class="relative">
+                <!-- Line Desktop -->
+                <div class="hidden lg:block absolute top-6 left-0 right-0 h-px bg-gray-800"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                    <!-- Step 1 -->
+                    <div class="relative reveal-on-scroll" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 rounded-full bg-[#1a1c18] border border-gray-700 flex items-center justify-center mb-6 relative z-10 mx-auto lg:mx-0">
+                            <span class="text-[#C5A065] font-serif">01</span>
+                        </div>
+                        <h3 class="text-xl font-serif mb-3 text-center lg:text-left">Échange initial</h3>
+                        <p class="text-xs text-gray-400 font-light leading-relaxed text-center lg:text-left">
+                            Nous analysons votre programme, vos besoins, le site, le budget et les contraintes du projet.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 rounded-full bg-[#1a1c18] border border-gray-700 flex items-center justify-center mb-6 relative z-10 mx-auto lg:mx-0">
+                            <span class="text-[#C5A065] font-serif">02</span>
+                        </div>
+                        <h3 class="text-xl font-serif mb-3 text-center lg:text-left">Esquisse et 3D</h3>
+                        <p class="text-xs text-gray-400 font-light leading-relaxed text-center lg:text-left">
+                            Nous développons les plans, les volumes et les visualisations afin de valider les choix architecturaux.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative reveal-on-scroll" style="transition-delay: 300ms;">
+                        <div class="w-12 h-12 rounded-full bg-[#1a1c18] border border-gray-700 flex items-center justify-center mb-6 relative z-10 mx-auto lg:mx-0">
+                            <span class="text-[#C5A065] font-serif">03</span>
+                        </div>
+                        <h3 class="text-xl font-serif mb-3 text-center lg:text-left">Dossier technique</h3>
+                        <p class="text-xs text-gray-400 font-light leading-relaxed text-center lg:text-left">
+                            Nous produisons les plans détaillés, les pièces graphiques et les prescriptions nécessaires à la réalisation.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative reveal-on-scroll" style="transition-delay: 400ms;">
+                        <div class="w-12 h-12 rounded-full bg-[#1a1c18] border border-gray-700 flex items-center justify-center mb-6 relative z-10 mx-auto lg:mx-0">
+                            <span class="text-[#C5A065] font-serif">04</span>
+                        </div>
+                        <h3 class="text-xl font-serif mb-3 text-center lg:text-left">Suivi de réalisation</h3>
+                        <p class="text-xs text-gray-400 font-light leading-relaxed text-center lg:text-left">
+                            Nous accompagnons la coordination des intervenants et le contrôle de la conformité du projet exécuté.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Differentiators -->
+    <section class="py-24 bg-[#f3e5d5] text-[#0d0f0b]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="reveal-on-scroll">
+                    <iconify-icon icon="solar:star-circle-linear" width="48" stroke-width="1" class="mb-4 text-[#0d0f0b]"></iconify-icon>
+                    <h3 class="text-xl font-serif mb-2">Architecture durable</h3>
+                    <p class="text-sm font-light text-gray-700">Des solutions conçues pour durer, évoluer et conserver leur cohérence dans le temps.</p>
+                </div>
+                <div class="reveal-on-scroll">
+                    <iconify-icon icon="solar:users-group-rounded-linear" width="48" stroke-width="1" class="mb-4 text-[#0d0f0b]"></iconify-icon>
+                    <h3 class="text-xl font-serif mb-2">Écoute et accompagnement</h3>
+                    <p class="text-sm font-light text-gray-700">Une démarche collaborative fondée sur vos besoins, vos priorités et les réalités du projet.</p>
+                </div>
+                <div class="reveal-on-scroll">
+                    <iconify-icon icon="solar:shield-check-linear" width="48" stroke-width="1" class="mb-4 text-[#0d0f0b]"></iconify-icon>
+                    <h3 class="text-xl font-serif mb-2">Maîtrise technique</h3>
+                    <p class="text-sm font-light text-gray-700">Une attention rigoureuse portée aux plans, aux détails, aux normes et à la qualité d’exécution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#fdfbf9] relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+            <!-- Contact Info & Map Background -->
+            <div class="contact-panel relative bg-[#0d0f0b] text-white p-12 lg:p-24 flex flex-col justify-center">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://i.ibb.co/sdfgsv6w/unnamed-1.webp')] bg-cover bg-center mix-blend-overlay"></div>
+                
+                <div class="relative z-10 reveal-on-scroll">
+                    <h2 class="text-4xl lg:text-6xl font-serif mb-8 tracking-tight">Parlons de <br>votre projet.</h2>
+                    <p class="text-gray-300 font-light mb-12 max-w-md">
+                        Présentez votre projet à Skifa Architecture : permis, conception, étude technique, topographie, suivi, devis ou assistance immobilière.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <iconify-icon icon="solar:map-point-linear" width="24" class="text-[#C5A065] mt-1"></iconify-icon>
+                            <div class="">
+                                <h4 class="font-serif text-lg">Nous trouver</h4>
+                                <a href="https://maps.app.goo.gl/PS2biYjtbvAnyFh56" target="_blank" rel="noopener noreferrer" class="text-sm font-light text-gray-400 hover:text-white transition-colors">Rue BEN CHAABANE Mouloud n°12, Draria — en face de la Daïra</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <iconify-icon icon="solar:phone-calling-linear" width="24" class="text-[#C5A065] mt-1"></iconify-icon>
+                            <div class="">
+                                <h4 class="font-serif text-lg">Appelez-nous</h4>
+                                <div class="flex flex-col gap-1">
+                                    <a href="tel:+213770891904" class="hover:text-white transition-colors text-sm font-light text-gray-400">0770 89 19 04 — Viber / WhatsApp</a>
+                                    <a href="tel:+213541497725" class="hover:text-white transition-colors text-sm font-light text-gray-400">0541 49 77 25</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <iconify-icon icon="solar:letter-linear" width="24" class="text-[#C5A065] mt-1"></iconify-icon>
+                            <div>
+                                <h4 class="font-serif text-lg">E-mail</h4>
+                                <a href="mailto:Bet.skifa2018@gmail.com" class="text-gray-400 text-sm font-light hover:text-white transition-colors break-all">Bet.skifa2018@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form-panel p-12 lg:p-24 flex flex-col justify-center bg-[#fdfbf9]">
+                <form id="contact-form" class="space-y-10 max-w-md mx-auto w-full reveal-on-scroll">
+                    <div class="relative">
+                        <input type="text" id="name" placeholder=" " class="custom-input block w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none focus:border-[#0d0f0b] transition-colors" required="">
+                        <label for="name" class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-300 pointer-events-none">Votre nom</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="email" id="email" placeholder=" " class="custom-input block w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none focus:border-[#0d0f0b] transition-colors" required="">
+                        <label for="email" class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-300 pointer-events-none">Adresse e-mail</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="tel" id="phone" placeholder=" " class="custom-input block w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none focus:border-[#0d0f0b] transition-colors">
+                        <label for="phone" class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-300 pointer-events-none">Numéro de téléphone</label>
+                    </div>
+
+                    <div class="relative">
+                        <label class="text-xs uppercase tracking-widest text-gray-500 mb-4 block">Type de projet</label>
+                        <div class="flex flex-wrap gap-4">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="type" class="peer sr-only" checked="">
+                                <span class="px-4 py-2 border border-gray-300 text-sm text-gray-600 peer-checked:bg-[#0d0f0b] peer-checked:text-white peer-checked:border-[#0d0f0b] transition-all">Résidentiel</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="type" class="peer sr-only">
+                                <span class="px-4 py-2 border border-gray-300 text-sm text-gray-600 peer-checked:bg-[#0d0f0b] peer-checked:text-white peer-checked:border-[#0d0f0b] transition-all">Professionnel</span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="type" class="peer sr-only">
+                                <span class="px-4 py-2 border border-gray-300 text-sm text-gray-600 peer-checked:bg-[#0d0f0b] peer-checked:text-white peer-checked:border-[#0d0f0b] transition-all">Urbanisme</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <textarea id="message" rows="4" placeholder=" " class="custom-input block w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none focus:border-[#0d0f0b] transition-colors resize-none"></textarea>
+                        <label for="message" class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-300 pointer-events-none">Décrivez votre projet</label>
+                    </div>
+
+                    <button type="submit" class="group w-full py-4 bg-[#0d0f0b] text-white uppercase tracking-widest text-xs hover:bg-[#C5A065] transition-colors duration-300 flex items-center justify-center gap-2">
+                        Envoyer la demande
+                        <iconify-icon icon="solar:letter-linear" width="16" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0d0f0b] text-white border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                <div>
+                    <img src="https://i.ibb.co/Q3MRMjdf/Chat-GPT-Image-Jul-27-2026-03-29-04-PM.png" alt="Logo Skifa Architecture" class="h-20 w-auto object-contain bg-white p-2">
+                    <p class="text-xs text-gray-500 mt-4 tracking-widest uppercase">ADEL Hamza — Architecte agréé</p>
+                    <p class="text-xs text-gray-500 mt-2" dir="rtl" lang="ar">مكتب دراسات الهندسة المعمارية و التعمير – السقيفة</p>
+                </div>
+                <div class="flex gap-6 mt-6 md:mt-0">
+                    <a href="https://t.me/Ah_architecture" target="_blank" rel="noopener noreferrer"
+                       class="text-gray-400 hover:text-white transition-colors" aria-label="Telegram Skifa Architecture">
+                        <iconify-icon icon="logos:telegram" width="26"></iconify-icon>
+                    </a>
+                    <a href="https://www.facebook.com/share/1PKceojy4b/" target="_blank" rel="noopener noreferrer"
+                       class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook Skifa Architecture">
+                        <iconify-icon icon="logos:facebook" width="26"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="w-full h-px bg-gray-800 mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between text-xs font-light text-gray-500">
+                <p>© 2026 Skifa Architecture. Tous droits réservés.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+document.getElementById('contact-form')?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const type = document.querySelector('input[name="type"]:checked')?.nextElementSibling?.textContent.trim() || '';
+  const text = [
+    'Bonjour Skifa Architecture,',
+    `Nom : ${name}`,
+    `E-mail : ${email}`,
+    `Téléphone : ${phone || 'Non renseigné'}`,
+    `Type de projet : ${type}`,
+    `Message : ${message || 'Demande de premier échange'}`
+  ].join('\n');
+  window.open(`https://wa.me/213770891904?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+});
+</script>
+
+
+
+<script>
+const projectGalleries = {"project1": {"title": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4", "location": "Les Vergers — Kouba", "images": [{"src": "https://i.ibb.co/mCjpRK0S/b26e5055-bd00-4704-b899-61322fa84dbc.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 1"}, {"src": "https://i.ibb.co/k26LcxcC/3d87ce73-0e56-4664-8611-334cf274da07.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 2"}, {"src": "https://i.ibb.co/WND8Y7wK/cc16bc24-3511-469f-9b82-33656fe54c86.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 3"}, {"src": "https://i.ibb.co/cKDhtqX0/09d215ea-1c75-41f4-8b50-7de290373189.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 4"}, {"src": "https://i.ibb.co/NngW51zK/0b1125a4-1ce5-472a-97ed-913e7a5bf540.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 5"}, {"src": "https://i.ibb.co/xSr78d91/68e6d0f3-7eb2-4db5-8c77-3eb87c152361.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 6"}, {"src": "https://i.ibb.co/ksDnccDt/19148a69-1f0c-473b-944d-e2ca8b423e7d.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 7"}, {"src": "https://i.ibb.co/kVhgsc68/745af5d4-5c50-44f1-a0af-c97b7a8328a1.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 8"}, {"src": "https://i.ibb.co/rG3xzHgB/fb18f596-063c-4daf-bdaa-68d437f9fd4c.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 9"}, {"src": "https://i.ibb.co/ZpNSw07H/3033fa04-bc06-4aa1-8c84-638860671feb.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 10"}, {"src": "https://i.ibb.co/G3FdhKVf/13c3046f-397c-4eb1-9c22-e2ff3d1bf710.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 1 entresol + R+4 — image 11"}]}, "project2": {"title": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique", "location": "Zemmouri — Boumerdès", "images": [{"src": "https://i.ibb.co/Q38Q4pVw/2ce74f19-2251-435b-86aa-b0dbf049fb9e.jpg", "alt": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique — image 1"}, {"src": "https://i.ibb.co/xSVM7rYt/c952150a-6b90-4595-bfce-e75db69228e8.jpg", "alt": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique — image 2"}, {"src": "https://i.ibb.co/tpJqsRy5/790d5f28-1b55-4b30-90fd-21a25d1dc2ca.jpg", "alt": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique — image 3"}, {"src": "https://i.ibb.co/tTWPQLz3/87bafc45-e5c7-4df9-adc4-a209cc75af3e.jpg", "alt": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique — image 4"}, {"src": "https://i.ibb.co/prML3nyJ/243c5c2d-6df7-4dea-84e3-c8e659c898cb.jpg", "alt": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique — image 5"}, {"src": "https://i.ibb.co/N6Nr43b7/bbfa419a-f8d7-470f-b7be-ac0bffb35e1c.jpg", "alt": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique — image 6"}, {"src": "https://i.ibb.co/NnZtTzLf/2a1d1308-be46-4df4-8014-af258ad2ccde.jpg", "alt": "Étude et suivi d’une construction à usage d’habitation en R+2 + attique — image 7"}]}, "project3": {"title": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements", "location": "El Achour", "images": [{"src": "https://i.ibb.co/YB3NQhwN/a83d6383-19aa-4d5c-8f5f-8054c3d40428.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements — image 1"}, {"src": "https://i.ibb.co/SXQZ24zR/e374b7b5-8f81-4e13-aee3-7a0ec537af6c.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements — image 2"}, {"src": "https://i.ibb.co/v6HhGBWg/88c2a825-09bb-4c8b-9b16-c675d49b1843.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements — image 3"}, {"src": "https://i.ibb.co/YFZW4rkQ/45e9afc7-6cd8-4f1b-a2a7-0975893e60b1.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements — image 4"}, {"src": "https://i.ibb.co/V0VmhhLM/6e0d5220-48f7-4586-9ec2-9ce485224e1e.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements — image 5"}, {"src": "https://i.ibb.co/HDHKW0DP/16b50a29-c9e9-4f37-a121-c68a43962aca.jpg", "alt": "Étude et suivi d’une construction à usage promotionnel en 1 sous-sol + 2 entresols + R+6 — 32 logements — image 6"}]}};
+
+const galleryModal = document.getElementById('project-gallery-modal');
+const galleryImage = document.getElementById('gallery-image');
+const galleryTitle = document.getElementById('gallery-title');
+const galleryLocation = document.getElementById('gallery-location');
+const galleryCounter = document.getElementById('gallery-counter');
+const galleryClose = document.getElementById('gallery-close');
+const galleryPrev = document.getElementById('gallery-prev');
+const galleryNext = document.getElementById('gallery-next');
+
+let currentProject = null;
+let currentImageIndex = 0;
+
+function renderGalleryImage() {
+  const gallery = projectGalleries[currentProject];
+  const image = gallery.images[currentImageIndex];
+  galleryImage.src = image.src;
+  galleryImage.alt = image.alt;
+  galleryTitle.textContent = gallery.title;
+  galleryLocation.textContent = gallery.location;
+  galleryCounter.textContent = `${currentImageIndex + 1} / ${gallery.images.length}`;
+}
+
+function openGallery(projectKey) {
+  currentProject = projectKey;
+  currentImageIndex = 0;
+  renderGalleryImage();
+  galleryModal.classList.remove('hidden');
+  galleryModal.classList.add('flex');
+  galleryModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  galleryClose.focus();
+}
+
+function closeGallery() {
+  galleryModal.classList.add('hidden');
+  galleryModal.classList.remove('flex');
+  galleryModal.setAttribute('aria-hidden', 'true');
+  galleryImage.src = '';
+  document.body.style.overflow = '';
+}
+
+function showPreviousImage() {
+  const total = projectGalleries[currentProject].images.length;
+  currentImageIndex = (currentImageIndex - 1 + total) % total;
+  renderGalleryImage();
+}
+
+function showNextImage() {
+  const total = projectGalleries[currentProject].images.length;
+  currentImageIndex = (currentImageIndex + 1) % total;
+  renderGalleryImage();
+}
+
+document.querySelectorAll('.project-gallery-trigger').forEach((button) => {
+  button.addEventListener('click', () => openGallery(button.dataset.project));
+});
+
+galleryClose.addEventListener('click', closeGallery);
+galleryPrev.addEventListener('click', showPreviousImage);
+galleryNext.addEventListener('click', showNextImage);
+
+galleryModal.addEventListener('click', (event) => {
+  if (event.target === galleryModal) closeGallery();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (galleryModal.classList.contains('hidden')) return;
+  if (event.key === 'Escape') closeGallery();
+  if (event.key === 'ArrowLeft') showPreviousImage();
+  if (event.key === 'ArrowRight') showNextImage();
+});
+
+let touchStartX = 0;
+galleryModal.addEventListener('touchstart', (event) => {
+  touchStartX = event.changedTouches[0].screenX;
+}, { passive: true });
+galleryModal.addEventListener('touchend', (event) => {
+  const difference = event.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(difference) < 50) return;
+  difference > 0 ? showPreviousImage() : showNextImage();
+}, { passive: true });
+</script>
+
+</body></html>
